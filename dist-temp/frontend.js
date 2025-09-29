@@ -16326,7 +16326,7 @@ var Hero = () => {
           /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
             className: "flex justify-center md:justify-start order-1 md:order-1",
             children: !logoError ? /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-              className: "w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 rounded-full shadow-lg",
+              className: "w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 rounded-full shadow-lg",
               children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("img", {
                 src: logo_default,
                 alt: "Logo",
@@ -16340,10 +16340,10 @@ var Hero = () => {
                 }
               }, undefined, false, undefined, this)
             }, undefined, false, undefined, this) : /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-              className: "w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 rounded-full shadow-lg",
+              className: "w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-500 rounded-full shadow-lg",
               children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-                width: "120",
-                height: "120",
+                width: "140",
+                height: "140",
                 viewBox: "0 0 100 100",
                 className: "text-white",
                 children: [
@@ -16371,7 +16371,7 @@ var Hero = () => {
             className: "text-center md:text-left order-2 md:order-2",
             children: [
               /* @__PURE__ */ jsx_dev_runtime.jsxDEV("h1", {
-                className: "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent leading-tight px-2",
+                className: "text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent leading-tight px-2",
                 children: [
                   "Hello, There!",
                   /* @__PURE__ */ jsx_dev_runtime.jsxDEV("br", {}, undefined, false, undefined, this),
@@ -16379,32 +16379,32 @@ var Hero = () => {
                 ]
               }, undefined, true, undefined, this),
               /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-                className: "text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 md:mb-8 h-12 sm:h-14 md:h-16 flex items-center justify-center md:justify-start px-2",
+                className: "text-2xl sm:text-2xl md:text-3xl text-gray-300 mb-8 md:mb-10 h-16 sm:h-16 md:h-18 flex items-center justify-center md:justify-start px-2",
                 children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("span", {
                   className: "bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent font-semibold text-center md:text-left",
                   children: [
                     displayedText,
                     /* @__PURE__ */ jsx_dev_runtime.jsxDEV("span", {
-                      className: `inline-block w-0.5 h-6 bg-blue-400 ml-1 ${showCursor ? "opacity-100" : "opacity-0"} transition-opacity duration-100`,
+                      className: `inline-block w-0.5 h-10 bg-blue-400 ml-1 ${showCursor ? "opacity-100" : "opacity-0"} transition-opacity duration-100`,
                       children: "|"
                     }, undefined, false, undefined, this)
                   ]
                 }, undefined, true, undefined, this)
               }, undefined, false, undefined, this),
               /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-                className: "flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start px-2",
+                className: "flex flex-col gap-4 justify-center md:justify-start px-4",
                 children: [
                   /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-                    className: "flex flex-col sm:flex-row gap-2 sm:gap-2",
+                    className: "flex flex-col sm:flex-row gap-4",
                     children: [
                       /* @__PURE__ */ jsx_dev_runtime.jsxDEV("button", {
                         onClick: () => {
                           window.open("/Resume.pdf", "_blank");
                         },
-                        className: "px-4 sm:px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base",
+                        className: "px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors flex items-center justify-center gap-3 text-lg font-medium shadow-lg hover:shadow-xl",
                         children: [
                           /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-                            className: "w-4 h-4 sm:w-5 sm:h-5",
+                            className: "w-6 h-6",
                             fill: "none",
                             stroke: "currentColor",
                             viewBox: "0 0 24 24",
@@ -16435,10 +16435,10 @@ var Hero = () => {
                           link.click();
                           document.body.removeChild(link);
                         },
-                        className: "px-4 sm:px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base",
+                        className: "px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors flex items-center justify-center gap-3 text-lg font-medium shadow-lg hover:shadow-xl",
                         children: [
                           /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-                            className: "w-4 h-4 sm:w-5 sm:h-5",
+                            className: "w-6 h-6",
                             fill: "none",
                             stroke: "currentColor",
                             viewBox: "0 0 24 24",
@@ -16449,13 +16449,13 @@ var Hero = () => {
                               d: "M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                             }, undefined, false, undefined, this)
                           }, undefined, false, undefined, this),
-                          "Download"
+                          "Download Resume"
                         ]
                       }, undefined, true, undefined, this)
                     ]
                   }, undefined, true, undefined, this),
                   /* @__PURE__ */ jsx_dev_runtime.jsxDEV("button", {
-                    className: "px-6 sm:px-8 py-3 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white rounded-lg transition-colors text-sm sm:text-base",
+                    className: "px-8 py-4 border-2 border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white rounded-lg transition-colors text-lg font-medium shadow-lg hover:shadow-xl",
                     children: "Get In Touch"
                   }, undefined, false, undefined, this)
                 ]
@@ -16547,24 +16547,24 @@ var Projects = () => {
       description: "A comprehensive disaster management solution providing real-time alerts for upcoming disasters, emergency response protocols, and safety precautions. Features live weather tracking, evacuation routes, and community alert systems.",
       image: "\uD83C\uDF26️",
       tech: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
-      demo: "https://github.com/shriom17/AgriGuru",
-      code: "https://github.com/shriom17/AgriGuru"
+      demo: "https://disaster-app-c84u.vercel.app/",
+      code: "https://github.com/shriom17/DisasterApp"
     },
     {
       title: "\uD83D\uDE9C KisanMitra - Smart Agricultural Advisory",
       description: "An innovative all-in-one collaborative platform empowering farmers with live weather alerts, AI-powered soil analysis, crop disease detection, real-time market prices, and expert agricultural guidance.",
       image: "\uD83D\uDC68‍\uD83C\uDF3E",
       tech: ["React.js", "Python Flask", "Socket.io", "MongoDB", "AI/ML"],
-      demo: "#",
-      code: "#"
+      demo: "https://agri-guru-pied.vercel.app/",
+      code: "https://github.com/shriom17/AgriGuru"
     },
     {
       title: "\uD83E\uDDE0 MindScape - Mental Health Tracker",
       description: "A revolutionary platform analyzing social media usage patterns to track mental health indicators. Provides personalized wellness recommendations and motivational content from ancient wisdom texts like the Bhagavad Gita.",
       image: "\uD83E\uDDE0",
       tech: ["React.js", "Python Flask", "Tinny Llama", "MongoDB", "NLP"],
-      demo: "#",
-      code: "#"
+      demo: "Coming Soon",
+      code: "https://github.com/shriom17/MindScape"
     }
   ];
   import_react.useEffect(() => {
@@ -16601,17 +16601,17 @@ var Projects = () => {
         }, undefined, false, undefined, this),
         /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
           ref: projectsRef,
-          className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10",
+          className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-8 lg:gap-10",
           children: projects.map((project, index) => /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
             className: `bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-500 shadow-lg hover:shadow-2xl border border-gray-700 hover:border-gray-600 ${visibleProjects[index] ? "translate-x-0 opacity-100" : "translate-x-[-100px] opacity-0"}`,
             style: {
               transitionDelay: visibleProjects[index] ? "0ms" : `${index * 200}ms`
             },
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-              className: "p-4 sm:p-6 text-center",
+              className: "p-6 sm:p-6 text-center",
               children: [
                 /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-                  className: "mb-4 sm:mb-6 h-32 sm:h-36 flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl border border-gray-600 hover:border-blue-400 transition-colors duration-300",
+                  className: "mb-6 sm:mb-6 h-40 sm:h-36 flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl border border-gray-600 hover:border-blue-400 transition-colors duration-300",
                   children: project.image.includes(".jpg") || project.image.includes(".png") || project.image.includes(".jpeg") ? /* @__PURE__ */ jsx_dev_runtime.jsxDEV("img", {
                     src: project.image,
                     alt: project.title,
@@ -16630,26 +16630,26 @@ var Projects = () => {
                   }, undefined, false, undefined, this)
                 }, undefined, false, undefined, this),
                 /* @__PURE__ */ jsx_dev_runtime.jsxDEV("h3", {
-                  className: "text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white",
+                  className: "text-2xl sm:text-2xl font-bold mb-4 sm:mb-4 text-white",
                   children: project.title
                 }, undefined, false, undefined, this),
                 /* @__PURE__ */ jsx_dev_runtime.jsxDEV("p", {
-                  className: "text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed min-h-[4rem] sm:min-h-[5rem]",
+                  className: "text-base sm:text-base text-gray-300 mb-6 sm:mb-6 leading-relaxed min-h-[5rem] sm:min-h-[5rem]",
                   children: project.description
                 }, undefined, false, undefined, this),
                 /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-                  className: "flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6 justify-center",
+                  className: "flex flex-wrap gap-3 sm:gap-3 mb-6 sm:mb-6 justify-center",
                   children: project.tech.map((tech) => /* @__PURE__ */ jsx_dev_runtime.jsxDEV("span", {
-                    className: "px-3 py-1.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs sm:text-sm rounded-full font-medium shadow-md hover:shadow-lg transition-shadow",
+                    className: "px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm sm:text-sm rounded-full font-medium shadow-md hover:shadow-lg transition-shadow",
                     children: tech
                   }, tech, false, undefined, this))
                 }, undefined, false, undefined, this),
                 /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-                  className: "flex gap-4 sm:gap-6 justify-center text-sm sm:text-base",
+                  className: "flex gap-6 sm:gap-6 justify-center text-base sm:text-base",
                   children: [
                     /* @__PURE__ */ jsx_dev_runtime.jsxDEV("a", {
                       href: project.demo,
-                      className: "flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium shadow-md hover:shadow-lg",
+                      className: "flex items-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium shadow-md hover:shadow-lg",
                       children: [
                         /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
                           className: "w-4 h-4",
@@ -16668,7 +16668,7 @@ var Projects = () => {
                     }, undefined, true, undefined, this),
                     /* @__PURE__ */ jsx_dev_runtime.jsxDEV("a", {
                       href: project.code,
-                      className: "flex items-center gap-2 px-4 py-2 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white rounded-lg transition-colors font-medium",
+                      className: "flex items-center gap-2 px-5 py-3 border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white rounded-lg transition-colors font-medium",
                       children: [
                         /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
                           className: "w-4 h-4",
@@ -16698,11 +16698,11 @@ var Skills = () => {
     className: "group relative",
     children: [
       /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-        className: "w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-110 hover:bg-gray-700",
+        className: "w-16 h-16 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center bg-gray-800 rounded-xl border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-110 hover:bg-gray-700",
         children
       }, undefined, false, undefined, this),
       /* @__PURE__ */ jsx_dev_runtime.jsxDEV("span", {
-        className: "absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap",
+        className: "absolute -bottom-8 sm:-bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap",
         children: name
       }, undefined, false, undefined, this)
     ]
@@ -16714,7 +16714,7 @@ var Skills = () => {
         {
           name: "React",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-blue-400",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-blue-400",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16725,7 +16725,7 @@ var Skills = () => {
         {
           name: "TypeScript",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-blue-600",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-blue-600",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16736,7 +16736,7 @@ var Skills = () => {
         {
           name: "Next.js",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-white",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-white",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16747,7 +16747,7 @@ var Skills = () => {
         {
           name: "TailwindCSS",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-cyan-400",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-cyan-400",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16758,7 +16758,7 @@ var Skills = () => {
         {
           name: "Vue.js",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-green-500",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-green-500",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16769,7 +16769,7 @@ var Skills = () => {
         {
           name: "HTML/CSS",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-orange-500",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-orange-500",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16785,7 +16785,7 @@ var Skills = () => {
         {
           name: "Node.js",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-green-600",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-green-600",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16796,7 +16796,7 @@ var Skills = () => {
         {
           name: "Java",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-orange-600",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-orange-600",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16807,7 +16807,7 @@ var Skills = () => {
         {
           name: "Python",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-yellow-400",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-yellow-400",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16818,7 +16818,7 @@ var Skills = () => {
         {
           name: "PostgreSQL",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-blue-600",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-blue-600",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16829,7 +16829,7 @@ var Skills = () => {
         {
           name: "MongoDB",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-green-600",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-green-600",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16840,7 +16840,7 @@ var Skills = () => {
         {
           name: "Redis",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-red-500",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-red-500",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16856,7 +16856,7 @@ var Skills = () => {
         {
           name: "Git",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-orange-600",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-orange-600",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16867,7 +16867,7 @@ var Skills = () => {
         {
           name: "Docker",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-blue-500",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-blue-500",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16878,7 +16878,7 @@ var Skills = () => {
         {
           name: "AWS",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-orange-400",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-orange-400",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16889,7 +16889,7 @@ var Skills = () => {
         {
           name: "Figma",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-purple-500",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-purple-500",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16900,7 +16900,7 @@ var Skills = () => {
         {
           name: "Jest",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-red-600",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-red-600",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("path", {
@@ -16911,7 +16911,7 @@ var Skills = () => {
         {
           name: "CI/CD",
           logo: /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
-            className: "w-8 h-8 text-green-500",
+            className: "w-10 h-10 sm:w-8 sm:h-8 text-green-500",
             viewBox: "0 0 24 24",
             fill: "currentColor",
             children: [
@@ -16960,21 +16960,21 @@ var Skills = () => {
       className: "max-w-6xl mx-auto",
       children: [
         /* @__PURE__ */ jsx_dev_runtime.jsxDEV("h2", {
-          className: "text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12",
+          className: "text-4xl sm:text-4xl font-bold text-center mb-10 sm:mb-12",
           children: "Skills & Technologies"
         }, undefined, false, undefined, this),
         /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
           ref: skillsRef,
-          className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12",
+          className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-8 lg:gap-12",
           children: skillCategories.map((category, categoryIndex) => /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
             className: "text-center",
             children: [
               /* @__PURE__ */ jsx_dev_runtime.jsxDEV("h3", {
-                className: "text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 lg:mb-8 text-blue-400",
+                className: "text-2xl sm:text-2xl font-semibold mb-6 sm:mb-6 lg:mb-8 text-blue-400",
                 children: category.title
               }, undefined, false, undefined, this),
               /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
-                className: "grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 justify-items-center",
+                className: "grid grid-cols-3 gap-4 sm:gap-4 lg:gap-6 justify-items-center",
                 children: category.skills.map((skill, skillIndex) => {
                   const globalIndex = skillCategories.slice(0, categoryIndex).reduce((acc, cat) => acc + cat.skills.length, 0) + skillIndex;
                   return /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
@@ -17373,7 +17373,7 @@ var Hobbies = () => {
             children: [
               /* @__PURE__ */ jsx_dev_runtime.jsxDEV("h2", {
                 className: "text-4xl font-bold mb-4",
-                children: "Hobbies & Art Gallery"
+                children: "Welcome to My Art Gallery"
               }, undefined, false, undefined, this),
               /* @__PURE__ */ jsx_dev_runtime.jsxDEV("p", {
                 className: "text-xl text-gray-300",
@@ -17790,4 +17790,4 @@ if (document.readyState === "loading") {
   start();
 }
 
-//# debugId=B70AECAAF9B4DACE64756E2164756E21
+//# debugId=D2FF9910C72F96F264756E2164756E21
