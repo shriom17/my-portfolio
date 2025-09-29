@@ -1,13 +1,14 @@
 {
-  "name": "bun-react-template",
-  "version": "0.1.0",
+  "name": "shriom-portfolio",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "bun --hot src/index.tsx",
     "dev-custom": "bun server.ts",
-    "start": "NODE_ENV=production bun src/index.tsx",
-    "build": "bun run build.ts"
+    "start": "NODE_ENV=production bun server.ts",
+    "build": "bun run build.ts",
+    "vercel-build": "bun run build.ts"
   },
   "dependencies": {
     "bun-plugin-tailwind": "^0.0.15",
