@@ -2,6 +2,6 @@
   "buildCommand": "bun run vercel-build",
   "outputDirectory": "dist",
   "installCommand": "bun install",
-  "framework": null,
+  "framework": "other",
   "devCommand": "bun run dev-custom"
 }

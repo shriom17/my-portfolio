@@ -117,6 +117,7 @@ if (existsSync(outdir)) {
 
 const start = performance.now();
 
+// Find HTML files to process
 const entrypoints = [...new Bun.Glob("**.html").scanSync("src")]
   .map(a => path.resolve("src", a))
   .filter(dir => !dir.includes("node_modules"));
