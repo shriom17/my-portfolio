@@ -965,7 +965,20 @@ const Achievements = () => {
       color: "from-yellow-400 to-orange-500"
     },
     {
-      
+      title: "National Finalist",
+      event: "Build With Gemini 2025",
+      description: "Selected as Top 20 National Finalist among one thousand participants in one of the most prestigious global hackathons",
+      icon: "🏆",
+      year: "2025",
+      color: "from-green-400 to-green-600"
+    },
+    {
+      title: "Top 200",
+      event: "Paranox",
+      description: "Recognized as the top 200 participants in Paranox 2.0",
+      icon: "🏅",
+      year: "2025",
+      color: "from-purple-400 to-purple-600"
     }
 
   ];
