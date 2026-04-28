@@ -950,12 +950,24 @@ const Achievements = () => {
   const achievements = [
     {
       title: "National Finalist",
+      event: "Meta Pytorch OpenEnv Hackathon 2026",
+      description: "Selected as Top 2.8%  National Finalist among Seventy thousand participants in one of the most prestigious global hackathons",
+      icon: "🏆",
+      year: "2026",
+      color: "from-blue-400 to-blue-600"
+    },
+    {
+      title: "National Finalist",
       event: "Infosys Global Hackathon 2025",
       description: "Selected as Top 33 National Finalist among two thousand participants in one of the most prestigious global hackathons",
       icon: "🏆",
       year: "2025",
       color: "from-yellow-400 to-orange-500"
+    },
+    {
+      
     }
+
   ];
 
   useEffect(() => {
