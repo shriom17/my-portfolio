@@ -9,15 +9,18 @@
 
   html {
     scroll-behavior: smooth;
+    height: 100%;
   }
 
   body {
-    display: grid;
-    place-items: center;
+    /* Allow full-width responsive layout instead of centering the whole page */
     min-width: 320px;
     min-height: 100vh;
     position: relative;
     margin: 0;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
