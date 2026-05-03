@@ -16397,10 +16397,10 @@ var Hero = () => {
                   /* @__PURE__ */ jsx_dev_runtime.jsxDEV("div", {
                     className: "flex flex-col sm:flex-row gap-4",
                     children: [
-                      /* @__PURE__ */ jsx_dev_runtime.jsxDEV("button", {
-                        onClick: () => {
-                          window.open("/Resume.pdf", "_blank");
-                        },
+                      /* @__PURE__ */ jsx_dev_runtime.jsxDEV("a", {
+                        href: "/Resume.pdf?v=20250503",
+                        target: "_blank",
+                        rel: "noopener noreferrer",
                         className: "px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors flex items-center justify-center gap-3 text-lg font-medium shadow-lg hover:shadow-xl",
                         children: [
                           /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
@@ -16426,15 +16426,9 @@ var Hero = () => {
                           "View Resume"
                         ]
                       }, undefined, true, undefined, this),
-                      /* @__PURE__ */ jsx_dev_runtime.jsxDEV("button", {
-                        onClick: () => {
-                          const link = document.createElement("a");
-                          link.href = "/Resume.pdf";
-                          link.download = "Resume.pdf";
-                          document.body.appendChild(link);
-                          link.click();
-                          document.body.removeChild(link);
-                        },
+                      /* @__PURE__ */ jsx_dev_runtime.jsxDEV("a", {
+                        href: "/Resume.pdf?v=20250503",
+                        download: "Resume.pdf",
                         className: "px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors flex items-center justify-center gap-3 text-lg font-medium shadow-lg hover:shadow-xl",
                         children: [
                           /* @__PURE__ */ jsx_dev_runtime.jsxDEV("svg", {
@@ -16702,7 +16696,7 @@ var Skills = () => {
         children
       }, undefined, false, undefined, this),
       /* @__PURE__ */ jsx_dev_runtime.jsxDEV("span", {
-        className: "absolute -bottom-8 sm:-bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap",
+        className: "absolute -bottom-10 sm:-bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap",
         children: name
       }, undefined, false, undefined, this)
     ]
@@ -17002,11 +16996,35 @@ var Achievements = () => {
   const achievements = [
     {
       title: "National Finalist",
+      event: "Meta Pytorch OpenEnv Hackathon 2026",
+      description: "Selected as Top 2.8%  National Finalist among Seventy thousand participants in one of the most prestigious global hackathons",
+      icon: "\uD83C\uDFC6",
+      year: "2026",
+      color: "from-blue-400 to-blue-600"
+    },
+    {
+      title: "National Finalist",
       event: "Infosys Global Hackathon 2025",
       description: "Selected as Top 33 National Finalist among two thousand participants in one of the most prestigious global hackathons",
       icon: "\uD83C\uDFC6",
       year: "2025",
       color: "from-yellow-400 to-orange-500"
+    },
+    {
+      title: "National Finalist",
+      event: "Build With Gemini 2025",
+      description: "Selected as Top 20 National Finalist among one thousand participants in one of the most prestigious global hackathons",
+      icon: "\uD83C\uDFC6",
+      year: "2025",
+      color: "from-green-400 to-green-600"
+    },
+    {
+      title: "Top 200",
+      event: "Paranox",
+      description: "Recognized as the top 200 participants in Paranox 2.0",
+      icon: "\uD83C\uDFC5",
+      year: "2025",
+      color: "from-purple-400 to-purple-600"
     }
   ];
   import_react.useEffect(() => {
@@ -17790,4 +17808,4 @@ if (document.readyState === "loading") {
   start();
 }
 
-//# debugId=D2FF9910C72F96F264756E2164756E21
+//# debugId=923B76072D0216EE64756E2164756E21

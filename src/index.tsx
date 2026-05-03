@@ -1,8 +1,23 @@
 import { serve } from "bun";
+import { fileURLToPath } from "node:url";
 import index from "./index.html";
 
 const server = serve({
   routes: {
+    "/My-Resume.pdf": {
+      async GET() {
+        const pdfPath = fileURLToPath(new URL("../public/My-Resume.pdf", import.meta.url));
+        const file = Bun.file(pdfPath);
+        return new Response(file, {
+          headers: {
+            "Content-Type": "application/pdf",
+            "Cache-Control": "no-store, no-cache, must-revalidate",
+            Pragma: "no-cache",
+          },
+        });
+      },
+    },
+
     // Serve index.html for all unmatched routes.
     "/*": index,
 

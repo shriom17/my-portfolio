@@ -3,16 +3,30 @@ const server = Bun.serve({
   async fetch(req) {
     const url = new URL(req.url);
     
-    // Serve Resume.pdf and other static files from public directory
-    if (url.pathname.startsWith('/artwork/') || url.pathname.endsWith('.pdf') || url.pathname.endsWith('.jpg') || url.pathname.endsWith('.png')) {
-      const filePath = `./public${url.pathname}`;
-      try {
-        const file = Bun.file(filePath);
-        if (await file.exists()) {
-          return new Response(file);
+    // Serve static assets from multiple candidate locations
+    if (
+      url.pathname.startsWith('/artwork/') ||
+      url.pathname.endsWith('.pdf') ||
+      url.pathname.endsWith('.jpg') ||
+      url.pathname.endsWith('.png')
+    ) {
+      const basename = url.pathname.split('/').pop();
+      const candidatePaths = [
+        `./public${url.pathname}`,
+        `./src/assets${url.pathname}`,
+        `./dist-temp${url.pathname}`,
+        basename ? `./dist-temp/${basename}` : undefined,
+      ].filter(Boolean) as string[];
+
+      for (const filePath of candidatePaths) {
+        try {
+          const file = Bun.file(filePath);
+          if (await file.exists()) {
+            return new Response(file);
+          }
+        } catch (error) {
+          console.error('Error serving static file:', error);
         }
-      } catch (error) {
-        console.error('Error serving static file:', error);
       }
     }
     
