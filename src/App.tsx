@@ -551,7 +551,7 @@ const Projects = () => {
   const projects = [
     {
       title: "🩺MedFlow-OpenEnv",
-      description: "A comprehensive disaster management solution providing real-time alerts for upcoming disasters, emergency response protocols, and safety precautions. Features live weather tracking, evacuation routes, and community alert systems.",
+      description: "A reinforcement learning-based hospital triage simulator that optimizes patient assignment, queue management, and resource allocation. Built with OpenEnv, FastAPI, and Python, featuring trained RL agents evaluated across multiple healthcare scenarios.",
       image: "🏥",
       tech: ["OpenEnv", "Python", "FastAPI", "Reinforcement Learning", "HTMLL" , "CSS"],
       demo: "https://shriom23-medflow-openenv.hf.space/",
