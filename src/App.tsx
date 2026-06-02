@@ -550,12 +550,12 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "🌦️ Disaster Management System",
+      title: "🩺MedFlow-OpenEnv",
       description: "A comprehensive disaster management solution providing real-time alerts for upcoming disasters, emergency response protocols, and safety precautions. Features live weather tracking, evacuation routes, and community alert systems.",
-      image: "🌦️",
-      tech: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
-      demo: "https://disaster-app-c84u.vercel.app/",
-      code: "https://github.com/shriom17/DisasterApp"
+      image: "🏥",
+      tech: ["OpenEnv", "Python", "FastAPI", "Reinforcement Learning", "HTMLL" , "CSS"],
+      demo: "https://shriom23-medflow-openenv.hf.space/",
+      code: "https://github.com/shriom17/MedFlow-OpenEnv"
     },
     {
       title: "🚜 KisanMitra - Smart Agricultural Advisory",
