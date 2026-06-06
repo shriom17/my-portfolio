@@ -374,7 +374,7 @@ const Hero = () => {
   // Typing animation states
   const titles = [
     "Aspiring Java Developer",
-    "Fullstack Enthusiast", 
+    "Fullstack Developer", 
     "AI/ML Explorer",
     "Cybersecurity Enthusiast"
   ];
