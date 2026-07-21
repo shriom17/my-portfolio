@@ -1501,7 +1501,25 @@ const Hobbies = () => {
             <div className="text-gray-300 text-sm">Passion Level</div>
           </div>
         </div>
+       <div className="flex justify-center py-10">
+        <div className="bg-gray-900 p-6 rounded-lg">
+          <div className="text-2xl font-bold text-red-400 text-center">
+            Art Portfolio By IndiaArt
+          </div>
+
+          <div className="text-gray-300 text-sm mt-3 text-center">
+            <a 
+              href="https://www.indiaart.com/young-art/young-portfolio/28542/shrioma-pal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-red-400"
+            >
+              https://www.indiaart.com/young-art/young-portfolio/28542/shrioma-pal
+            </a>
+          </div>
+        </div>
       </div>
+</div>
 
       {/* Fullscreen Modal */}
       {showModal && modalImage && (
