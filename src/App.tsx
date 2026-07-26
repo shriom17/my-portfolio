@@ -991,7 +991,8 @@ const Achievements = () => {
       description: "Recognized as the top 200 participants in Paranox 2.0",
       icon: "🏅",
       year: "2025",
-      color: "from-pink-400 to-purple-600"
+      color: "from-pink-400 to-purple-600",
+      link: "https://www.linkedin.com/posts/shrioma-pal-8176aa268_hackathon-innovation-techxninjas-activity-7408863594639134720-48L6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGZOhMBdXd1v4QClFCiTtpDkqXxlyqqvAs"
     }
 
   ];
