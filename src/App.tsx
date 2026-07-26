@@ -983,7 +983,8 @@ const Achievements = () => {
       description: "Selected as Top 20 National Finalist among one thousand participants in one of the most prestigious global hackathons",
       icon: "🏆",
       year: "2025",
-      color: "from-green-700 to-white-800"
+      color: "from-green-700 to-white-800",
+      link: "https://www.linkedin.com/posts/shrioma-pal-8176aa268_rank1-buildwithgemini-hackathon2025-activity-7399324424799215616-eNDj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGZOhMBdXd1v4QClFCiTtpDkqXxlyqqvAs"
     },
     {
       title: "Top 200",
