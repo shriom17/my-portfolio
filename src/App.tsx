@@ -3,6 +3,9 @@ import "./index.css";
 // Import logo directly
 import logoUrl from "./logo.png";
 
+const NAV_SECTIONS = ["home", "about", "projects", "skills", "achievements", "hobbies", "contact"] as const;
+type NavSection = (typeof NAV_SECTIONS)[number];
+
 // Import artwork images - All 38 artworks
 import alanTuringImg from './assets/artwork/AlanTuring.jpg';
 import kalamImg from './assets/artwork/apj-abdul-kalam-15.jpg';
@@ -281,14 +284,19 @@ const AnimatedBackground = () => {
 };
 
 // Components
-const Navigation = () => {
-  const [activeSection, setActiveSection] = useState("home");
+const Navigation = ({
+  activeSection,
+  onNavigate,
+}: {
+  activeSection: NavSection;
+  onNavigate: (sectionId: NavSection) => void;
+}) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
-    setActiveSection(sectionId);
+    onNavigate(sectionId as NavSection);
     setIsMobileMenuOpen(false); // Close mobile menu after navigation
   };
 
@@ -300,7 +308,7 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
-            {["home", "about", "projects", "skills", "achievements", "hobbies", "contact"].map((section) => (
+            {NAV_SECTIONS.map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -335,7 +343,7 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-700">
             <div className="flex flex-col space-y-2 pt-4">
-              {["home", "about", "projects", "skills", "achievements", "hobbies", "contact"].map((section) => (
+              {NAV_SECTIONS.map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -1050,6 +1058,8 @@ const Hobbies = () => {
   const [showModal, setShowModal] = useState(false);
   const [modalImage, setModalImage] = useState<{title: string, image: string, description: string} | null>(null);
   const hobbiesRef = useRef<HTMLDivElement>(null);
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
+  const [loadedArtworkCount, setLoadedArtworkCount] = useState(0);
 
   // Complete artwork collection - All 38 pieces
   const drawings = [
@@ -1283,6 +1293,57 @@ const Hobbies = () => {
     }
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) {
+          setIsSectionVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (hobbiesRef.current) {
+      observer.observe(hobbiesRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isSectionVisible) {
+      return;
+    }
+
+    const batchSize = 6;
+    let cancelled = false;
+    let timeoutId: number | undefined;
+
+    setLoadedArtworkCount(Math.min(batchSize, drawings.length));
+
+    const loadNextBatch = (nextCount: number) => {
+      if (cancelled) {
+        return;
+      }
+
+      setLoadedArtworkCount(nextCount);
+
+      if (nextCount < drawings.length) {
+        timeoutId = window.setTimeout(() => loadNextBatch(Math.min(nextCount + batchSize, drawings.length)), 80);
+      }
+    };
+
+    timeoutId = window.setTimeout(() => loadNextBatch(Math.min(batchSize * 2, drawings.length)), 80);
+
+    return () => {
+      cancelled = true;
+      if (timeoutId !== undefined) {
+        window.clearTimeout(timeoutId);
+      }
+    };
+  }, [isSectionVisible, drawings.length]);
+
   // Auto-rotation effect
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -1321,7 +1382,7 @@ const Hobbies = () => {
   };
 
   return (
-    <section id="hobbies" className="py-20 px-4 relative overflow-hidden">
+    <section id="hobbies" ref={hobbiesRef} className="py-20 px-4 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Welcome to My Art Gallery</h2>
@@ -1332,7 +1393,6 @@ const Hobbies = () => {
 
         {/* 3D Card Carousel */}
         <div 
-          ref={hobbiesRef}
           className="relative h-[500px] perspective-1000 flex items-center justify-center"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
@@ -1346,6 +1406,7 @@ const Hobbies = () => {
               let transformClass = '';
               let zIndex = 0;
               let opacity = 0.3;
+              const shouldLoadImage = isSectionVisible && index < loadedArtworkCount;
               
               if (isActive) {
                 transformClass = 'translate-x-0 rotate-y-0 scale-110';
@@ -1380,27 +1441,38 @@ const Hobbies = () => {
                   <div className="relative w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-700 hover:border-blue-400 transition-all duration-300">
                     {/* Image Container */}
                     <div className="h-64 overflow-hidden relative">
-                      <img 
-                        src={drawing.image} 
-                        alt={drawing.title}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          // Fallback to placeholder if image fails to load
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.innerHTML = `
-                              <div class="w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                                <div class="text-white text-center p-6">
-                                  <div class="text-6xl mb-4">🎨</div>
-                                  <h3 class="text-lg font-semibold mb-2">${drawing.title}</h3>
+                      {shouldLoadImage ? (
+                        <img 
+                          src={drawing.image} 
+                          alt={drawing.title}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => {
+                            // Fallback to placeholder if image fails to load
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            const parent = target.parentElement;
+                            if (parent) {
+                              parent.innerHTML = `
+                                <div class="w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                                  <div class="text-white text-center p-6">
+                                    <div class="text-6xl mb-4">🎨</div>
+                                    <h3 class="text-lg font-semibold mb-2">${drawing.title}</h3>
+                                  </div>
                                 </div>
-                              </div>
-                            `;
-                          }
-                        }}
-                      />
+                              `;
+                            }
+                          }}
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                          <div className="text-white text-center p-6">
+                            <div className="text-6xl mb-4">🎨</div>
+                            <h3 className="text-lg font-semibold mb-2">{drawing.title}</h3>
+                          </div>
+                        </div>
+                      )}
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
                     </div>
@@ -1636,11 +1708,71 @@ const Contact = () => {
 };
 
 export function App() {
+  const [activeSection, setActiveSection] = useState<NavSection>("home");
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const sectionElements = NAV_SECTIONS
+        .map((sectionId) => document.getElementById(sectionId))
+        .filter((element): element is HTMLElement => Boolean(element));
+
+      if (!sectionElements.length) {
+        return;
+      }
+
+      const navOffset = 120;
+      let currentSection: NavSection = "home";
+
+      for (const sectionElement of sectionElements) {
+        const rect = sectionElement.getBoundingClientRect();
+
+        if (rect.top <= navOffset && rect.bottom > navOffset) {
+          currentSection = sectionElement.id as NavSection;
+          break;
+        }
+
+        if (rect.top > navOffset) {
+          break;
+        }
+
+        currentSection = sectionElement.id as NavSection;
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    let animationFrameId = 0;
+
+    const handleScroll = () => {
+      if (animationFrameId) {
+        return;
+      }
+
+      animationFrameId = window.requestAnimationFrame(() => {
+        animationFrameId = 0;
+        updateActiveSection();
+      });
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+
+      if (animationFrameId) {
+        window.cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#242424] text-white relative">
       <AnimatedBackground />
       <div className="relative z-10">
-        <Navigation />
+        <Navigation activeSection={activeSection} onNavigate={setActiveSection} />
         <Hero />
         <About />
         <Projects />
