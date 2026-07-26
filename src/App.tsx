@@ -956,7 +956,8 @@ const Achievements = () => {
       description: "Recognized as Intern of the Month during my Web Developer Internship for consistent technical contributions across backend development, API development, testing, and debugging.",
       icon: "🎖️",
       year: "2026",
-      color: "from-red-400 to-blu-600"
+      color: "from-red-400 to-blu-600",
+      link: "https://www.linkedin.com/posts/shrioma-pal-8176aa268_honored-and-grateful-to-be-recognized-as-ugcPost-7468297143745859584-He8C/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGZOhMBdXd1v4QClFCiTtpDkqXxlyqqvAs"
     },
     {
       title: "National Finalist",
@@ -1037,9 +1038,21 @@ const Achievements = () => {
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-2">
                     <h3 className="text-2xl font-bold text-white">{achievement.title}</h3>
-                    <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-semibold">
-                      {achievement.year}
-                    </span>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-semibold">
+                        {achievement.year}
+                      </span>
+                      {achievement.link && (
+                        <a
+                          href={achievement.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 rounded-full border border-blue-400/40 bg-gradient-to-r from-blue-500/20 to-cyan-400/20 px-3 py-1 text-sm font-semibold text-blue-200 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300/60 hover:from-blue-500/30 hover:to-cyan-400/30 hover:text-white hover:shadow-md"
+                        >
+                          check now
+                        </a>
+                      )}
+                    </div>
                   </div>
                   <h4 className="text-xl font-semibold text-yellow-400 mb-3">{achievement.event}</h4>
                   <p className="text-gray-300 leading-relaxed">{achievement.description}</p>
