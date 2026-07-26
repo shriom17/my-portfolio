@@ -950,13 +950,21 @@ const Achievements = () => {
   const achievementRef = useRef<HTMLDivElement>(null);
 
   const achievements = [
+      {
+      title: "Recognized as Intern Of The Month",
+      event: "Web Development Internship at Labdox Pvt. Ltd.",
+      description: "Recognized as Intern of the Month during my Web Developer Internship for consistent technical contributions across backend development, API development, testing, and debugging.",
+      icon: "🎖️",
+      year: "2026",
+      color: "from-red-400 to-blu-600"
+    },
     {
       title: "National Finalist",
       event: "Meta Pytorch OpenEnv Hackathon 2026",
       description: "Selected as Top 2.8%  National Finalist among Seventy thousand participants in one of the most prestigious global hackathons",
       icon: "🏆",
       year: "2026",
-      color: "from-blue-400 to-blue-600"
+      color: "from-blue-400 to-green-600"
     },
     {
       title: "National Finalist",
@@ -964,7 +972,7 @@ const Achievements = () => {
       description: "Selected as Top 33 National Finalist among two thousand participants in one of the most prestigious global hackathons",
       icon: "🏆",
       year: "2025",
-      color: "from-yellow-400 to-orange-500"
+      color: "from-pink-300 to-orange-800"
     },
     {
       title: "National Finalist",
@@ -972,15 +980,15 @@ const Achievements = () => {
       description: "Selected as Top 20 National Finalist among one thousand participants in one of the most prestigious global hackathons",
       icon: "🏆",
       year: "2025",
-      color: "from-green-400 to-green-600"
+      color: "from-green-700 to-white-800"
     },
     {
       title: "Top 200",
-      event: "Paranox",
+      event: "Paranox 2.0 Hackathon By TexaNinjas",
       description: "Recognized as the top 200 participants in Paranox 2.0",
       icon: "🏅",
       year: "2025",
-      color: "from-purple-400 to-purple-600"
+      color: "from-pink-400 to-purple-600"
     }
 
   ];
