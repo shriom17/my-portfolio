@@ -974,7 +974,8 @@ const Achievements = () => {
       description: "Selected as Top 33 National Finalist among two thousand participants in one of the most prestigious global hackathons",
       icon: "🏆",
       year: "2025",
-      color: "from-pink-300 to-orange-800"
+      color: "from-pink-300 to-orange-800",
+      link: "https://www.linkedin.com/posts/shrioma-pal-8176aa268_infosysglobalhackathon2025-techforgood-opportunitymatters-activity-7375095792597917696-Qkrp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGZOhMBdXd1v4QClFCiTtpDkqXxlyqqvAs"
     },
     {
       title: "National Finalist",
