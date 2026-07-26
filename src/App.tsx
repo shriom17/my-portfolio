@@ -965,7 +965,8 @@ const Achievements = () => {
       description: "Selected as Top 2.8%  National Finalist among Seventy thousand participants in one of the most prestigious global hackathons",
       icon: "🏆",
       year: "2026",
-      color: "from-blue-400 to-green-600"
+      color: "from-blue-400 to-green-600",
+      link: "https://www.linkedin.com/posts/shrioma-pal-8176aa268_meta-pytorch-openenv-ugcPost-7468248063216828417--JSE/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEGZOhMBdXd1v4QClFCiTtpDkqXxlyqqvAs"
     },
     {
       title: "National Finalist",
