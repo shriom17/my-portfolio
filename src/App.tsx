@@ -1609,9 +1609,9 @@ const Hobbies = () => {
               href="https://www.indiaart.com/young-art/young-portfolio/28542/shrioma-pal"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-red-400"
+              className="inline-flex items-center gap-1 rounded-full border border-red-400/40 bg-gradient-to-r from-red-500/20 to-orange-400/20 px-4 py-2 text-sm font-semibold text-red-200 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-red-300/60 hover:from-red-500/30 hover:to-orange-400/30 hover:text-white hover:shadow-md"
             >
-              https://www.indiaart.com/young-art/young-portfolio/28542/shrioma-pal
+              check now
             </a>
           </div>
         </div>
