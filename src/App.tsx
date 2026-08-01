@@ -578,7 +578,7 @@ const Projects = () => {
       description: "A revolutionary platform analyzing social media usage patterns to track mental health indicators. Provides personalized wellness recommendations and motivational content from ancient wisdom texts like the Bhagavad Gita.",
       image: "🧠",
       tech: ["React.js", "Python Flask", "Tinny Llama", "MongoDB", "NLP"],
-      demo: "Coming Soon",
+      demo: "https://mind-scape-pi.vercel.app/",
       code: "https://github.com/shriom17/MindScape"
     }
   ];
